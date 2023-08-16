@@ -11,12 +11,10 @@ import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatNativeDateModule} from '@angular/material/core';
-// import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
-// import {NgIf} from '@angular/common';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -29,6 +27,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [HomeComponent, NewsComponent, TasksComponent, StatusComponent],
+
+
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -42,9 +42,7 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     MatNativeDateModule,
-
-    // MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule,
-    // NgIf,
+   
   ],
 })
 export class HomeModule {}

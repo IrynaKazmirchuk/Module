@@ -1,49 +1,68 @@
 <p>home works!</p>
-<button mat-raised-button color="primary">Primary</button>
+<div class="buttons">
+  <button mat-raised-button color="primary">Primary</button>
 <button mat-raised-button color="accent">Accent</button>
+</div>
+
 <mat-card>
-    <mat-card-content>Simple card</mat-card-content>
-  </mat-card>
+  <mat-card-content
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet dolore
+    quaerat quis rem voluptate saepe mollitia incidunt non dolorem impedit quia
+    quod quos ipsa sapiente, culpa id animi! Eaque reiciendis illum voluptates
+    quo quos explicabo veniam. Quas eveniet deleniti ut in reprehenderit quo
+    inventore similique, dicta rerum exercitationem molestiae accusamus
+    possimus, consequuntur impedit quisquam numquam magnam delectus consequatur,
+    perferendis accusantium. Magnam eos deleniti magni, molestias vel eligendi
+    culpa mollitia est, velit consectetur harum quo nulla nisi dolor. Mollitia
+    neque enim tempore! Reiciendis magnam deserunt voluptas quas distinctio
+    provident quisquam doloremque. Harum quae totam vel saepe non quos aperiam.
+    Perferendis.</mat-card-content
+  >
+</mat-card>
 
-  <section class="example-section">
-    <span class="example-list-section">
-      <mat-checkbox class="example-margin"
-                    [checked]="allComplete"
-                    [color]="task.color"
-                    [indeterminate]="someComplete()"
-                    (change)="setAll($event.checked)">
-        {{task.name}}
-      </mat-checkbox>
-    </span>
-    <span class="example-list-section">
-      <ul>
-        <li *ngFor="let subtask of task.subtasks">
-          <mat-checkbox [(ngModel)]="subtask.completed"
-                        [color]="subtask.color"
-                        (ngModelChange)="updateAllComplete()">
-            {{subtask.name}}
-          </mat-checkbox>
-        </li>
-      </ul>
-    </span>
-  </section>
+<section class="example-section">
+  <span class="example-list-section">
+    <mat-checkbox
+      class="example-margin"
+      [checked]="allComplete"
+      [color]="task.color"
+      [indeterminate]="someComplete()"
+      (change)="setAll($event.checked)"
+    >
+      {{ task.name }}
+    </mat-checkbox>
+  </span>
+  <span class="example-list-section">
+    <ul>
+      <li *ngFor="let subtask of task.subtasks">
+        <mat-checkbox
+          [(ngModel)]="subtask.completed"
+          [color]="subtask.color"
+          (ngModelChange)="updateAllComplete()"
+        >
+          {{ subtask.name }}
+        </mat-checkbox>
+      </li>
+    </ul>
+  </span>
+</section>
 
-  <mat-chip-listbox aria-label="Fish selection">
-    <mat-chip-option>One fish</mat-chip-option>
-    <mat-chip-option>Two fish</mat-chip-option>
-    <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
-    <mat-chip-option color="warn">Warn fish</mat-chip-option>
-  </mat-chip-listbox>
+<mat-chip-listbox aria-label="Fish selection">
+  <mat-chip-option>One fish</mat-chip-option>
+  <mat-chip-option>Two fish</mat-chip-option>
+  <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+  <mat-chip-option color="warn">Warn fish</mat-chip-option>
+</mat-chip-listbox>
 
-  <mat-form-field>
-    <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
-    <mat-hint>MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
+<mat-form-field>
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker" />
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
 
-  <!-- <ol>
+<!-- <ol>
     <li>
       <mat-form-field>
         <mat-label>What's your name?</mat-label>
@@ -56,17 +75,4 @@
     <li *ngIf="animal">
       You chose: <em>{{animal}}</em>
     </li>
-  </ol>
-
-  <h1 mat-dialog-title>Hi {{data.name}}</h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div> -->
+  </ol> -->

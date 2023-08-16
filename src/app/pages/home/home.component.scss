@@ -1,0 +1,15 @@
+mat-card-content {
+    color: rgb(238, 224, 224);
+    width: 200px;
+    background: rgb(117, 117, 196);
+    box-shadow: 10px 5px 5px rgb(25, 16, 155);
+    margin: 20px;
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin: 20px;
+}
+mat-form-field {
+    margin: 20px;
+}
